@@ -1,10 +1,7 @@
-- [首页](/)
-
 - 指南
-  - [快速开始](guide/quickstart.md)
-  - [配置说明](guide/configuration.md)
-  - [写作指南](guide/writing.md)
-
+  - [快速开始](/guide/quickstart)
+  - [配置说明](/guide/configuration)
+  - [写作指南](/guide/writing)
 - 示例
-  - [代码示例](examples/code.md)
-  - [图片示例](examples/images.md)
+  - [代码示例](/examples/code)
+  - [图片示例](/examples/images)
