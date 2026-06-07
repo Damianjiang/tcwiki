@@ -39,12 +39,13 @@ greet("World")
 
 .button {
   padding: 10px 20px;
-  background: #42b983;
+  background: #333;
   color: white;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
 }
 ```
 
-## 点击代码块右上角的 <i class="fa fa-copy"></i> 按钮可以复制代码！
+## 代码复制
+
+点击代码块右上角的按钮可以复制代码。
