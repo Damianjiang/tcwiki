@@ -31,11 +31,8 @@
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="apple-touch-icon" href="logo.png">
   
-  <!-- Docsify Default Theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  
-  <!-- Docsify Sidebar Pro -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-pro@latest/docsify-sidebar-pro.min.css">
+  <!-- Docsify Darklight Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" />
 </head>
 <body>
   <div id="app"></div>
@@ -73,25 +70,40 @@
         errorText: '失败',
         successText: '已复制'
       },
-      sidebarPro: {
-        theme: 'forest',
-        accordion: false,
-        showCount: true,
-        darkMode: false,
-        scrollSpeed: 3,
-        panelOpacity: 0.9,
-        wordCount: {
-          countable: true,
-          language: "chinese",
-          showReadTime: true
+      darklightTheme: {
+        defaultTheme: 'dark',
+        siteFonts: {
+          siteFont: 'Source Sans Pro, sans-serif',
+          headerFont: 'Roboto, sans-serif',
+          codeFont: 'JetBrains Mono, monospace'
         },
-        autoReadSpotlight: true,
-        progressBar: {
-          enabled: true,
-          type: 'gradient',
-          height: 3,
-          position: 'top',
-          showPercentage: false
+        customTheme: {
+          dark: {
+            background: '#1a1a2e',
+            highlightColor: '#3eaf7c',
+            sidebarBackground: '#16213e',
+            codeBackground: '#2d2d2d',
+            codeTextColor: '#e96900',
+            bodyTextColor: '#b4b4b4',
+            borderColor: '#444',
+            titleColor: '#fff',
+            linkColor: '#3eaf7c',
+            hoverLinkColor: '#2c7a57',
+            tableBodyBackground: '#2d2d2d'
+          },
+          light: {
+            background: '#ffffff',
+            highlightColor: '#3eaf7c',
+            sidebarBackground: '#f8f8f8',
+            codeBackground: '#f5f5f5',
+            codeTextColor: '#e96900',
+            bodyTextColor: '#34495e',
+            borderColor: '#ddd',
+            titleColor: '#333',
+            linkColor: '#3eaf7c',
+            hoverLinkColor: '#2c7a57',
+            tableBodyBackground: '#f5f5f5'
+          }
         }
       }
     };
@@ -105,8 +117,6 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/copy-code.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2"></script>
-  
-  <!-- Docsify Sidebar Pro -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-pro@latest/docsify-sidebar-pro.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" type="text/javascript"></script>
 </body>
 </html>
