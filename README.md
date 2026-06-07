@@ -8,7 +8,7 @@
 
 ---
 
-## 快速开始
+## 服务器信息
 
 ### 服务器基本信息
 
@@ -59,9 +59,6 @@
   - [服务器法律合规条款](guide/legal.md)
   - [TCraft 论坛系统使用教程](guide/forum.md)
   - [补充重要提醒](guide/notice.md)
-- 示例
-  - [代码示例](examples/code.md)
-  - [图片示例](examples/images.md)
 
 ---
 
