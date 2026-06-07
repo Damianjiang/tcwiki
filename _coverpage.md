@@ -7,5 +7,5 @@
 一个简洁的文档网站
 
 <p>
-  <a href="#/">开始使用 →</a>
+  <a href="#/guide/quickstart">开始使用 →</a>
 </p>
