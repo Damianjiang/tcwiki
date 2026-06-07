@@ -8,10 +8,8 @@
   - [服务器状态查询指令](guide/status.md)
   - [服务器数据与统计查询](guide/data.md)
   - [皮肤设置教程](guide/skin.md)
-  - [玩家百科 - 皮肤系统](guide/skin-system.md)
   - [领地系统帮助](guide/residence.md)
   - [传送功能指令](guide/teleport.md)
-  - [玩家百科 - 传送系统](guide/teleport-system.md)
   - [经济系统完整教程](guide/economy.md)
   - [白名单系统](guide/whitelist.md)
   - [服务器重启更新指令](guide/restart.md)
@@ -19,5 +17,6 @@
   - [问题反馈专属渠道](guide/feedback.md)
   - [服务器法律合规条款](guide/legal.md)
   - [TCraft 论坛系统使用教程](guide/forum.md)
-  - [玩家百科 - 技能奖励与战利品系统](guide/skills.md)
   - [补充重要提醒](guide/notice.md)
+- 玩家百科
+  - [玩家百科](guide/player-guide.md)
