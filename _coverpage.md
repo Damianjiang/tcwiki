@@ -2,10 +2,10 @@
   <img src="logo.png" alt="Logo" width="64" height="64">
 </div>
 
-# Wiki
+# TCraft WIKI
 
 一个简洁的文档网站
 
 <p>
-  <a href="#/guide/quickstart">开始使用 →</a>
+  <a href="#/guide/about">开始使用 →</a>
 </p>
