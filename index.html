@@ -31,103 +31,11 @@
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="apple-touch-icon" href="logo.png">
   
-  <!-- Docsify Themeable Simple Theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <!-- Docsify Default Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   
-  <!-- Custom Styles -->
-  <style>
-    :root {
-      --theme-hue: 210;
-      --theme-saturation: 80%;
-      --theme-lightness: 50%;
-      --heading-h1-font-size: 2em;
-      --heading-h1-margin: 0 0 0.6em 0;
-      --heading-h2-font-size: 1.5em;
-      --heading-h2-margin: 1.4em 0 0.6em 0;
-      --sidebar-width: 300px;
-      --content-max-width: 850px;
-    }
-    
-    .sidebar-nav > ul > li > p {
-      font-weight: 600;
-      color: var(--base-color);
-    }
-    
-    .sidebar-nav > ul > li > ul {
-      padding-left: 0.6em;
-    }
-    
-    .cover {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-    
-    .cover h1, .cover h2, .cover p {
-      color: white !important;
-    }
-    
-    .cover a {
-      color: white !important;
-      border-color: white !important;
-      transition: all 0.3s ease;
-    }
-    
-    .cover a:hover {
-      background: white !important;
-      color: #667eea !important;
-    }
-    
-    .markdown-section {
-      padding: 40px 60px;
-    }
-    
-    .markdown-section h1 {
-      border-bottom: 2px solid var(--theme-color);
-      padding-bottom: 0.3em;
-    }
-    
-    .markdown-section h2 {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 0.2em;
-    }
-    
-    .markdown-section blockquote {
-      border-left: 4px solid var(--theme-color);
-      background: var(--blockquote-background);
-      padding: 1em 1.5em;
-      margin: 1em 0;
-    }
-    
-    .markdown-section code {
-      background: var(--code-block-background);
-      padding: 0.2em 0.5em;
-      border-radius: 3px;
-    }
-    
-    .markdown-section pre code {
-      padding: 1.5em;
-    }
-    
-    .markdown-section table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1em 0;
-    }
-    
-    .markdown-section th,
-    .markdown-section td {
-      border: 1px solid var(--border-color);
-      padding: 0.75em 1em;
-    }
-    
-    .markdown-section th {
-      background: var(--code-block-background);
-      font-weight: 600;
-    }
-    
-    .markdown-section tr:nth-child(even) {
-      background: var(--code-block-background);
-    }
-  </style>
+  <!-- Docsify Sidebar Pro -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-pro@latest/docsify-sidebar-pro.min.css">
 </head>
 <body>
   <div id="app"></div>
@@ -165,13 +73,27 @@
         errorText: '失败',
         successText: '已复制'
       },
-      plugins: [
-        function(hook) {
-          hook.beforeEach(function(html) {
-            return html;
-          });
+      sidebarPro: {
+        theme: 'forest',
+        accordion: false,
+        showCount: true,
+        darkMode: false,
+        scrollSpeed: 3,
+        panelOpacity: 0.9,
+        wordCount: {
+          countable: true,
+          language: "chinese",
+          showReadTime: true
+        },
+        autoReadSpotlight: true,
+        progressBar: {
+          enabled: true,
+          type: 'gradient',
+          height: 3,
+          position: 'top',
+          showPercentage: false
         }
-      ]
+      }
     };
   </script>
   
@@ -183,5 +105,8 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/copy-code.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2"></script>
+  
+  <!-- Docsify Sidebar Pro -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-pro@latest/docsify-sidebar-pro.min.js"></script>
 </body>
 </html>
