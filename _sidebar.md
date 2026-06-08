@@ -1,7 +1,8 @@
 - 关于服务器
   - [关于服务器](guide/about.md)
+  - [TCraft服务器规则](guide/server-rules.md)
+  - [TCraft服务器官方免责声明](guide/disclaimer.md)
 - 帮助中心
-  - [核心生存规则](guide/rules.md)
   - [账号登录注册系统](guide/account.md)
   - [玩家核心可视化菜单](guide/menu.md)
   - [个性化昵称设置](guide/nick.md)
