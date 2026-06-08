@@ -10,6 +10,7 @@
   - [皮肤设置教程](guide/skin.md)
   - [领地系统帮助](guide/residence.md)
   - [传送功能指令](guide/teleport.md)
+  - [技能奖励与战利品系统](guide/skills.md)
   - [经济系统完整教程](guide/economy.md)
   - [白名单系统](guide/whitelist.md)
   - [服务器重启更新指令](guide/restart.md)
@@ -18,5 +19,3 @@
   - [服务器法律合规条款](guide/legal.md)
   - [TCraft 论坛系统使用教程](guide/forum.md)
   - [补充重要提醒](guide/notice.md)
-- 玩家百科
-  - [玩家百科](guide/player-guide.md)
