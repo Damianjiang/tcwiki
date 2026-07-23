@@ -1,0 +1,42 @@
+/* 自定义主题样式：保持原 docsify 品牌色 #3eaf7c 与暗色观感 */
+
+:root {
+  /* 品牌色（与原 docsify 一致） */
+  --vp-c-brand-1: #3eaf7c;
+  --vp-c-brand-2: #2c7a57;
+  --vp-c-brand-3: #3eaf7c;
+  --vp-c-brand-soft: rgba(62, 175, 124, 0.14);
+
+  /* hero 区域品牌按钮 */
+  --vp-button-brand-bg: #3eaf7c;
+  --vp-button-brand-hover-bg: #2c7a57;
+  --vp-button-brand-border: transparent;
+}
+
+/* 暗色主题背景（贴近原 docsify #1a1a2e） */
+.dark {
+  --vp-c-bg: #1a1a2e;
+  --vp-c-bg-alt: #16213e;
+  --vp-c-bg-soft: #1f1f35;
+  --vp-c-border: #444;
+  --vp-c-text-1: #b4b4b4;
+  --vp-c-text-2: #999;
+  --vp-c-heading: #fff;
+  --vp-code-bg: #2d2d2d;
+  --vp-code-color: #e96900;
+}
+
+/* 顶部 logo 尺寸 */
+.VPNavBarTitle img {
+  height: 28px;
+}
+
+/* 首页 hero logo */
+.VPHero img {
+  max-height: 160px;
+}
+
+/* 页脚 */
+.VPFooter {
+  font-size: 13px;
+}
