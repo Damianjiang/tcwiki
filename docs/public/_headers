@@ -1,0 +1,25 @@
+# HTML 文档不缓存，确保每次部署立即生效
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 首页
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 带 hash 的静态资源长缓存（VitePress 构建产物）
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 图片缓存 7 天
+/*.png
+  Cache-Control: public, max-age=604800
+/*.jpg
+  Cache-Control: public, max-age=604800
+/*.jpeg
+  Cache-Control: public, max-age=604800
+/*.webp
+  Cache-Control: public, max-age=604800
+/*.svg
+  Cache-Control: public, max-age=604800
+/*.ico
+  Cache-Control: public, max-age=604800
