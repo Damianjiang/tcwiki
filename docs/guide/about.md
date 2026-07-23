@@ -66,6 +66,7 @@ T Craft 定期举办主题活动、建筑赛事、生存挑战等社区内容，
 
 ## 快速导航
 
+- [TCraft 命令总览](/guide/tcraft-help)
 - [TCraft服务器规则](/guide/server-rules)
 - [账号登录注册系统](/guide/account)
 - [玩家核心可视化菜单](/guide/menu)

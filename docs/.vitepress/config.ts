@@ -50,6 +50,7 @@ export default defineConfig({
       {
         text: '帮助中心',
         items: [
+          { text: 'TCraft 命令总览', link: '/guide/tcraft-help' },
           { text: '账号登录注册系统', link: '/guide/account' },
           { text: '玩家核心可视化菜单', link: '/guide/menu' },
           { text: '个性化昵称设置', link: '/guide/nick' },
