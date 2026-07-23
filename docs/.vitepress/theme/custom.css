@@ -11,6 +11,16 @@
   --vp-button-brand-bg: #3eaf7c;
   --vp-button-brand-hover-bg: #2c7a57;
   --vp-button-brand-border: transparent;
+
+  --vp-button-alt-bg: rgba(62, 175, 124, 0.1);
+  --vp-button-alt-hover-bg: rgba(62, 175, 124, 0.18);
+  --vp-button-alt-border: rgba(62, 175, 124, 0.4);
+
+  /* hero 渐变 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #3eaf7c 30%, #7dd3a8);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, rgba(62, 175, 124, 0.25), rgba(62, 175, 124, 0.05));
+  --vp-home-hero-image-filter: blur(44px);
 }
 
 /* 暗色主题背景（贴近原 docsify #1a1a2e） */
@@ -31,9 +41,39 @@
   height: 28px;
 }
 
-/* 首页 hero logo */
-.VPHero img {
-  max-height: 160px;
+/* 首页 hero logo 放大显示 */
+.VPHero .VPImage {
+  max-width: 220px;
+  width: 220px;
+  height: auto;
+}
+
+/* 首页 feature 卡片增强 */
+.VPFeatures .VPLink {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.VPFeatures .VPLink:hover {
+  transform: translateY(-4px);
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 8px 24px rgba(62, 175, 124, 0.15);
+}
+
+/* feature 图标尺寸放大 */
+.VPFeatures .icon {
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  background: var(--vp-c-brand-soft);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hero 按钮间距 */
+.VPHero .actions {
+  gap: 12px;
 }
 
 /* 页脚 */
