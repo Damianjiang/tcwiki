@@ -80,3 +80,26 @@
 .VPFooter {
   font-size: 13px;
 }
+
+/* ===== 页面切换动画 ===== */
+.VPContent.page-enter {
+  animation: pageEnter 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 尊重"减少动画"系统偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .VPContent.page-enter {
+    animation: none;
+  }
+}
