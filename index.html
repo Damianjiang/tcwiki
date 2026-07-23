@@ -17,7 +17,7 @@
   <meta property="og:url" content="https://tcraft.pages.dev/">
   <meta property="og:title" content="TCraft WIKI - Minecraft 服务器帮助文档">
   <meta property="og:description" content="TCraft Minecraft服务器帮助文档，包含服务器规则、功能使用指南、完整的帮助文档">
-  <meta property="og:image" content="logo.png">
+  <meta property="og:image" content="og-image.jpg">
   <meta property="og:site_name" content="TCraft WIKI">
   
   <!-- Twitter -->
@@ -25,14 +25,14 @@
   <meta name="twitter:url" content="https://tcraft.pages.dev/">
   <meta name="twitter:title" content="TCraft WIKI - Minecraft 服务器帮助文档">
   <meta name="twitter:description" content="TCraft Minecraft服务器帮助文档，包含服务器规则、功能使用指南、完整的帮助文档">
-  <meta name="twitter:image" content="logo.png">
+  <meta name="twitter:image" content="og-image.jpg">
   
   <!-- Favicon -->
   <link rel="icon" href="logo.png" type="image/png">
   <link rel="apple-touch-icon" href="logo.png">
   
   <!-- Docsify Darklight Theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" />
+  <link rel="stylesheet" href="/vendor/darklight/style.min.css" title="docsify-darklight-theme" type="text/css" />
   
   <!-- Back to Top Button -->
   <style>
@@ -157,15 +157,15 @@
     };
   </script>
   
-  <!-- Docsify Core -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-  
+  <!-- Docsify Core (本地化，走 Cloudflare CDN，避免国内访问 jsdelivr 慢) -->
+  <script src="/vendor/docsify.min.js"></script>
+
   <!-- Docsify Plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/copy-code.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" type="text/javascript"></script>
+  <script src="/vendor/plugins/search.min.js"></script>
+  <script src="/vendor/plugins/zoom-image.min.js"></script>
+  <script src="/vendor/plugins/copy-code.min.js"></script>
+  <script src="/vendor/docsify-pagination.min.js"></script>
+  <script src="/vendor/darklight/index.min.js" type="text/javascript"></script>
   
   <!-- Back to Top Script -->
   <script>
