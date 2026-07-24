@@ -42,7 +42,8 @@ const teekConfig = defineTeekConfig({
   breadcrumb: { enabled: false }, // 面包屑导航
 
   // 启用路由切换 loading 遮罩（SPA 客户端导航时显示）
-  loading: true,
+  // 字符串形式可自定义文案（替换 teek 默认的 "Teek 拼命加载中..."）
+  loading: '页面加载中...',
 
   // 禁用 teek 的博客向 Vite 插件：
   // sidebar 插件会自动扫描文档用文件名(英文 slug)生成侧边栏，覆盖手动配置的中文侧边栏
