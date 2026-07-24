@@ -109,3 +109,23 @@
           background-position: -100% 0;
      }
 }
+
+/* ==================== 关闭加载按钮 ==================== */
+
+.tk-close-loading-btn {
+     margin-top: 10px;
+     padding: 4px 14px;
+     font-size: 12px;
+     line-height: 1.5;
+     color: var(--vp-c-text-2, #666);
+     background: transparent;
+     border: 1px solid var(--vp-c-divider, #ccc);
+     border-radius: 4px;
+     cursor: pointer;
+     transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+.tk-close-loading-btn:hover {
+     color: var(--vp-c-brand-1, #3eaf7c);
+     border-color: var(--vp-c-brand-1, #3eaf7c);
+     background-color: var(--vp-c-brand-soft, rgba(62, 175, 124, 0.14));
+}
