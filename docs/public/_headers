@@ -1,9 +1,10 @@
-# HTML 文档：短缓存 + 后台异步更新（部署后 60 秒内自动刷新，兼顾速度与即时性）
+# HTML 文档：浏览器缓存 5 分钟，部署后通过文件名 hash 的资源自动更新
+# (VitePress 的 HTML 引用的 /assets/* 都带 hash, 内容变更会生成新文件, 故 HTML 短缓存安全)
 /*.html
-  Cache-Control: public, max-age=60, stale-while-revalidate=604800
+  Cache-Control: public, max-age=300
 
 /
-  Cache-Control: public, max-age=60, stale-while-revalidate=604800
+  Cache-Control: public, max-age=300
 
 # 带 hash 的静态资源长缓存（VitePress 构建产物，文件名含 hash，内容变更会生成新文件）
 /assets/*
