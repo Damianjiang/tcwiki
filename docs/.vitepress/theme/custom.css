@@ -1,7 +1,7 @@
-/* 自定义主题样式：保留 TCraft 品牌色 #3eaf7c，融合 Yiov 主题美化 */
+/* TCraft 品牌色定制（Teek 主题基础上覆盖） */
 
 :root {
-  /* 品牌色（TCraft 原有） */
+  /* 品牌色（TCraft 原 docsify 品牌色 #3eaf7c） */
   --vp-c-brand-1: #3eaf7c;
   --vp-c-brand-2: #2c7a57;
   --vp-c-brand-3: #3eaf7c;
@@ -28,12 +28,6 @@
   --vp-c-bg: #1a1a2e;
   --vp-c-bg-alt: #16213e;
   --vp-c-bg-soft: #1f1f35;
-  --vp-c-border: #444;
-  --vp-c-text-1: #b4b4b4;
-  --vp-c-text-2: #999;
-  --vp-c-heading: #fff;
-  --vp-code-bg: #2d2d2d;
-  --vp-code-color: #e96900;
 }
 
 /* 顶部 logo 尺寸 */
@@ -73,39 +67,4 @@
 /* hero 按钮间距 */
 .VPHero .actions {
   gap: 12px;
-}
-
-/* 页脚 */
-.VPFooter {
-  font-size: 13px;
-}
-
-/* 引用块美化：圆角 + 左侧色条 */
-.vp-doc blockquote {
-  border-radius: 10px;
-  padding: 18px 20px 20px 15px;
-  position: relative;
-  background-color: var(--vp-c-gray-soft);
-  border-left: 6px solid var(--vp-c-brand-2);
-}
-
-/* medium-zoom 图片放大层级 */
-.medium-zoom-overlay {
-  z-index: 30;
-}
-.medium-zoom-image {
-  z-index: 9999 !important;
-}
-
-/* 文档 h1 标题渐变（品牌色） */
-.VPDoc h1 {
-  background: -webkit-linear-gradient(10deg, #3eaf7c 5%, #7dd3a8 15%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* 超链接去除默认下划线 */
-.vp-doc a {
-  text-decoration: none;
 }

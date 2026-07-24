@@ -1,13 +1,47 @@
 import { defineConfig } from 'vitepress'
+import { defineTeekConfig } from 'vitepress-theme-teek/config'
+
+// Teek 主题配置
+const teekConfig = defineTeekConfig({
+  teekTheme: true, // 启用 Teek 主题
+  teekHome: false, // 不启用博客风格首页，保留 VitePress 默认文档首页（hero + features）
+  vpHome: true, // 保留 VitePress 首页风格
+
+  // 深色/浅色模式切换时的圆形扩散动画（View Transition API）
+  viewTransition: {
+    enabled: true,
+    mode: 'out-in',
+    duration: 300,
+    easing: 'ease-in'
+  },
+
+  // 代码块美化
+  codeBlock: {
+    enabled: true,
+    collapseHeight: 700
+  },
+
+  // 返回顶部按钮
+  backTop: {
+    enabled: true,
+    content: 'progress'
+  },
+
+  // 主题增强面板（右上角）
+  themeEnhance: {
+    enabled: true,
+    position: 'top'
+  }
+})
 
 // 部署 base 路径：GitHub Pages 在子路径 /tcwiki/ 下，Cloudflare Pages 在根路径 /
 // 通过环境变量 BASE_PATH 区分，默认根路径（适配 Cloudflare Pages）
 export default defineConfig({
+  extends: teekConfig,
   lang: 'zh-CN',
   title: 'TCraft WIKI',
   description: 'TCraft Minecraft 服务器帮助文档',
   base: process.env.BASE_PATH || '/',
-  // 构建输出目录（默认 docs/.vitepress/dist）
 
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
@@ -29,8 +63,6 @@ export default defineConfig({
     // 顶部站点名 + logo
     siteTitle: 'TCraft WIKI',
     logo: '/logo.png',
-
-    // 暗色主题为默认（通过下面的自定义样式强制）
 
     // 顶部导航
     nav: [

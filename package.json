@@ -10,6 +10,7 @@
   "devDependencies": {
     "medium-zoom": "^1.1.0",
     "nprogress-v2": "^1.1.10",
-    "vitepress": "^1.6.4"
+    "vitepress": "^1.6.4",
+    "vitepress-theme-teek": "^1.6.0"
   }
 }
