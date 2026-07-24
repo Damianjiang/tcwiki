@@ -1,12 +1,11 @@
-# HTML 文档不缓存，确保每次部署立即生效
+# HTML 文档：短缓存 + 后台异步更新（部署后 60 秒内自动刷新，兼顾速度与即时性）
 /*.html
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=60, stale-while-revalidate=604800
 
-# 首页
 /
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=60, stale-while-revalidate=604800
 
-# 带 hash 的静态资源长缓存（VitePress 构建产物）
+# 带 hash 的静态资源长缓存（VitePress 构建产物，文件名含 hash，内容变更会生成新文件）
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
@@ -23,3 +22,11 @@
   Cache-Control: public, max-age=604800
 /*.ico
   Cache-Control: public, max-age=604800
+
+# 字体长缓存
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
