@@ -41,6 +41,9 @@ const teekConfig = defineTeekConfig({
   articleAnalyze: { enabled: false }, // 文章字数/阅读时间分析
   breadcrumb: { enabled: false }, // 面包屑导航
 
+  // 启用路由切换 loading 遮罩（SPA 客户端导航时显示）
+  loading: true,
+
   // 禁用 teek 的博客向 Vite 插件：
   // sidebar 插件会自动扫描文档用文件名(英文 slug)生成侧边栏，覆盖手动配置的中文侧边栏
   // permalink/mdH1/docAnalysis 均为博客向功能，文档站不需要
@@ -72,7 +75,10 @@ export default defineConfig({
     // 预连接关键资源域名(虽同域但帮助浏览器尽早建立连接)
     ['link', { rel: 'preconnect', href: '/' }],
     // DNS 预解析(减少首次连接延迟)
-    ['link', { rel: 'dns-prefetch', href: 'https://tcwiki.pages.dev' }]
+    ['link', { rel: 'dns-prefetch', href: 'https://tcwiki.pages.dev' }],
+    // ===== 首次加载进度条（内联，零额外下载，HTML 解析时立即执行） =====
+    ['style', {}, `#tc-loader{position:fixed;top:0;left:0;height:3px;width:0;z-index:99999;background:linear-gradient(90deg,#3eaf7c,#7dd3a8);box-shadow:0 0 8px rgba(62,175,124,.6);opacity:1;transition:opacity .4s}#tc-loader::after{content:attr(data-pct);position:fixed;top:8px;right:16px;font-size:12px;font-weight:600;color:#3eaf7c;background:rgba(255,255,255,.92);padding:2px 8px;border-radius:4px;box-shadow:0 1px 3px rgba(0,0,0,.12)}html.dark #tc-loader::after{background:rgba(26,26,46,.92);color:#7dd3a8}#tc-loader.done{width:100%!important;opacity:0}`],
+    ['script', {}, `(function(){var l=document.createElement('div');l.id='tc-loader';l.setAttribute('data-pct','0%');document.documentElement.appendChild(l);var p=0,t;function up(){if(p<90){p+=Math.random()*(p<30?15:5);l.style.width=p+'%';l.setAttribute('data-pct',Math.round(p)+'%')}t=setTimeout(up,p<30?100:300)}up();function done(){clearTimeout(t);l.style.width='100%';l.setAttribute('data-pct','100%');l.className='done';setTimeout(function(){l.remove()},600)}window.addEventListener('load',done);document.addEventListener('DOMContentLoaded',function(){if(document.readyState==='complete')done()})})();`]
   ],
 
   // 站点外观
