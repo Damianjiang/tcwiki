@@ -1,7 +1,7 @@
-/* 自定义主题样式：保持原 docsify 品牌色 #3eaf7c 与暗色观感 */
+/* 自定义主题样式：保留 TCraft 品牌色 #3eaf7c，融合 Yiov 主题美化 */
 
 :root {
-  /* 品牌色（与原 docsify 一致） */
+  /* 品牌色（TCraft 原有） */
   --vp-c-brand-1: #3eaf7c;
   --vp-c-brand-2: #2c7a57;
   --vp-c-brand-3: #3eaf7c;
@@ -48,13 +48,12 @@
   height: auto;
 }
 
-/* 首页 feature 卡片增强 */
-.VPFeatures .VPLink {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+/* 首页 feature 卡片悬浮效果 */
+.VPFeatures .items .item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
-
-.VPFeatures .VPLink:hover {
-  transform: translateY(-4px);
+.VPFeatures .items .item:hover {
+  transform: translateY(-5px);
   border-color: var(--vp-c-brand-1);
   box-shadow: 0 8px 24px rgba(62, 175, 124, 0.15);
 }
@@ -81,69 +80,32 @@
   font-size: 13px;
 }
 
-/* ===== 页面切换动画 ===== */
-/* 整体淡入 + 上移，内容元素依次渐入形成层次感 */
-.VPContent.page-enter {
-  animation: pageEnter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+/* 引用块美化：圆角 + 左侧色条 */
+.vp-doc blockquote {
+  border-radius: 10px;
+  padding: 18px 20px 20px 15px;
+  position: relative;
+  background-color: var(--vp-c-gray-soft);
+  border-left: 6px solid var(--vp-c-brand-2);
 }
 
-@keyframes pageEnter {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* medium-zoom 图片放大层级 */
+.medium-zoom-overlay {
+  z-index: 30;
+}
+.medium-zoom-image {
+  z-index: 9999 !important;
 }
 
-/* 内容元素依次渐入：标题、段落、列表、表格、代码块、提示卡片 */
-.VPContent.page-enter .VPDoc h1,
-.VPContent.page-enter .VPDoc h2,
-.VPContent.page-enter .VPDoc h3,
-.VPContent.page-enter .VPDoc p,
-.VPContent.page-enter .VPDoc ul,
-.VPContent.page-enter .VPDoc ol,
-.VPContent.page-enter .VPDoc blockquote,
-.VPContent.page-enter .VPDoc table,
-.VPContent.page-enter .VPDoc div[class*='language-'],
-.VPContent.page-enter .VPDoc .vp-doc .tip,
-.VPContent.page-enter .VPDoc .vp-doc .warning,
-.VPContent.page-enter .VPDoc .vp-doc .danger,
-.VPContent.page-enter .VPDoc .vp-doc .important {
-  animation: staggerFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+/* 文档 h1 标题渐变（品牌色） */
+.VPDoc h1 {
+  background: -webkit-linear-gradient(10deg, #3eaf7c 5%, #7dd3a8 15%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.VPContent.page-enter .VPDoc h1 { animation-delay: 0.06s; }
-.VPContent.page-enter .VPDoc h2 { animation-delay: 0.12s; }
-.VPContent.page-enter .VPDoc h3 { animation-delay: 0.18s; }
-.VPContent.page-enter .VPDoc p { animation-delay: 0.10s; }
-.VPContent.page-enter .VPDoc ul,
-.VPContent.page-enter .VPDoc ol { animation-delay: 0.16s; }
-.VPContent.page-enter .VPDoc blockquote { animation-delay: 0.20s; }
-.VPContent.page-enter .VPDoc table { animation-delay: 0.22s; }
-.VPContent.page-enter .VPDoc div[class*='language-'] { animation-delay: 0.24s; }
-.VPContent.page-enter .VPDoc .vp-doc .tip,
-.VPContent.page-enter .VPDoc .vp-doc .warning,
-.VPContent.page-enter .VPDoc .vp-doc .danger,
-.VPContent.page-enter .VPDoc .vp-doc .important { animation-delay: 0.26s; }
-
-@keyframes staggerFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 尊重"减少动画"系统偏好 */
-@media (prefers-reduced-motion: reduce) {
-  .VPContent.page-enter,
-  .VPContent.page-enter .VPDoc * {
-    animation: none !important;
-  }
+/* 超链接去除默认下划线 */
+.vp-doc a {
+  text-decoration: none;
 }
