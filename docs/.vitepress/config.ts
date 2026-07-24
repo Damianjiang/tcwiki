@@ -1,9 +1,12 @@
 import { defineConfig } from 'vitepress'
 
+// 部署 base 路径：GitHub Pages 在子路径 /tcwiki/ 下，Cloudflare Pages 在根路径 /
+// 通过环境变量 BASE_PATH 区分，默认根路径（适配 Cloudflare Pages）
 export default defineConfig({
   lang: 'zh-CN',
   title: 'TCraft WIKI',
   description: 'TCraft Minecraft 服务器帮助文档',
+  base: process.env.BASE_PATH || '/',
   // 构建输出目录（默认 docs/.vitepress/dist）
 
   head: [
