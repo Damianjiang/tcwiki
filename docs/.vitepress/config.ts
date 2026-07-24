@@ -21,7 +21,7 @@ const teekConfig = defineTeekConfig({
     collapseHeight: 700
   },
 
-  // 返回顶部按钮
+  // 返回顶部按钮（显示阅读进度百分比）
   backTop: {
     enabled: true,
     content: 'progress'
@@ -31,6 +31,24 @@ const teekConfig = defineTeekConfig({
   themeEnhance: {
     enabled: true,
     position: 'top'
+  },
+
+  // 关闭博客向组件（文档站不需要）
+  toComment: { enabled: false }, // 滚动到评论区按钮（右下角"聊天"图标）
+  notice: { enabled: false }, // 公告弹窗
+  articleBanner: { enabled: false }, // 文章页 Banner 大图
+  articleUpdate: { enabled: false }, // 文章最近更新栏
+  articleAnalyze: { enabled: false }, // 文章字数/阅读时间分析
+  breadcrumb: { enabled: false }, // 面包屑导航
+
+  // 禁用 teek 的博客向 Vite 插件：
+  // sidebar 插件会自动扫描文档用文件名(英文 slug)生成侧边栏，覆盖手动配置的中文侧边栏
+  // permalink/mdH1/docAnalysis 均为博客向功能，文档站不需要
+  vitePlugins: {
+    sidebar: false,
+    permalink: false,
+    mdH1: false,
+    docAnalysis: false
   }
 })
 
