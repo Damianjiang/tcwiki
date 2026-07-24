@@ -68,7 +68,11 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: 'TCraft Minecraft服务器帮助文档，包含服务器规则、功能使用指南、完整的帮助文档' }],
     ['meta', { property: 'og:image', content: '/og-image.jpg' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:image', content: '/og-image.jpg' }]
+    ['meta', { name: 'twitter:image', content: '/og-image.jpg' }],
+    // 预连接关键资源域名(虽同域但帮助浏览器尽早建立连接)
+    ['link', { rel: 'preconnect', href: '/' }],
+    // DNS 预解析(减少首次连接延迟)
+    ['link', { rel: 'dns-prefetch', href: 'https://tcwiki.pages.dev' }]
   ],
 
   // 站点外观
@@ -76,6 +80,31 @@ export default defineConfig({
   cleanUrls: true,
   appearance: 'dark',
   ignoreDeadLinks: true,
+
+  // Vite 构建优化：拆分大 chunk，让首屏只加载必要代码
+  vite: {
+    build: {
+      chunkSizeWarningLimit: 1000,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            // teek 主题代码单独拆分(首屏不需要全部 teek 代码)
+            if (id.includes('vitepress-theme-teek')) {
+              return 'teek'
+            }
+            // Vue 运行时单独拆分
+            if (id.includes('node_modules/vue') || id.includes('node_modules/@vue')) {
+              return 'vue-vendor'
+            }
+            // medium-zoom / nprogress 等第三方库
+            if (id.includes('node_modules/medium-zoom') || id.includes('node_modules/nprogress')) {
+              return 'utils'
+            }
+          }
+        }
+      }
+    }
+  },
 
   themeConfig: {
     // 顶部站点名 + logo
