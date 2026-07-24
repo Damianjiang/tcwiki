@@ -82,14 +82,57 @@
 }
 
 /* ===== 页面切换动画 ===== */
+/* 整体淡入 + 上移，内容元素依次渐入形成层次感 */
 .VPContent.page-enter {
-  animation: pageEnter 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pageEnter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes pageEnter {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 内容元素依次渐入：标题、段落、列表、表格、代码块、提示卡片 */
+.VPContent.page-enter .VPDoc h1,
+.VPContent.page-enter .VPDoc h2,
+.VPContent.page-enter .VPDoc h3,
+.VPContent.page-enter .VPDoc p,
+.VPContent.page-enter .VPDoc ul,
+.VPContent.page-enter .VPDoc ol,
+.VPContent.page-enter .VPDoc blockquote,
+.VPContent.page-enter .VPDoc table,
+.VPContent.page-enter .VPDoc div[class*='language-'],
+.VPContent.page-enter .VPDoc .vp-doc .tip,
+.VPContent.page-enter .VPDoc .vp-doc .warning,
+.VPContent.page-enter .VPDoc .vp-doc .danger,
+.VPContent.page-enter .VPDoc .vp-doc .important {
+  animation: staggerFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.VPContent.page-enter .VPDoc h1 { animation-delay: 0.06s; }
+.VPContent.page-enter .VPDoc h2 { animation-delay: 0.12s; }
+.VPContent.page-enter .VPDoc h3 { animation-delay: 0.18s; }
+.VPContent.page-enter .VPDoc p { animation-delay: 0.10s; }
+.VPContent.page-enter .VPDoc ul,
+.VPContent.page-enter .VPDoc ol { animation-delay: 0.16s; }
+.VPContent.page-enter .VPDoc blockquote { animation-delay: 0.20s; }
+.VPContent.page-enter .VPDoc table { animation-delay: 0.22s; }
+.VPContent.page-enter .VPDoc div[class*='language-'] { animation-delay: 0.24s; }
+.VPContent.page-enter .VPDoc .vp-doc .tip,
+.VPContent.page-enter .VPDoc .vp-doc .warning,
+.VPContent.page-enter .VPDoc .vp-doc .danger,
+.VPContent.page-enter .VPDoc .vp-doc .important { animation-delay: 0.26s; }
+
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -99,7 +142,8 @@
 
 /* 尊重"减少动画"系统偏好 */
 @media (prefers-reduced-motion: reduce) {
-  .VPContent.page-enter {
-    animation: none;
+  .VPContent.page-enter,
+  .VPContent.page-enter .VPDoc * {
+    animation: none !important;
   }
 }
