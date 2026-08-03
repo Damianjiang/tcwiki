@@ -50,4 +50,8 @@ features:
     title: 经济系统
     details: 完整的经济系统教程，赚钱、交易、商店一应俱全。
     link: /guide/economy
+  - icon: ⚔️
+    title: RPG 内容
+    details: 服务器 RPG 系统的完整帮助文档，正在建设中，敬请期待。
+    link: /guide/rpg/
 ---

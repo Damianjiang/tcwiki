@@ -129,12 +129,6 @@ export default defineConfig({
     // 侧边栏（对应原 docsify _sidebar.md 的分组结构）
     sidebar: [
       {
-        text: 'RPG 内容',
-        items: [
-          { text: 'RPG 内容更新中', link: '/guide/rpg/' }
-        ]
-      },
-      {
         text: '关于服务器',
         items: [
           { text: '关于服务器', link: '/guide/about' },
@@ -162,7 +156,8 @@ export default defineConfig({
           { text: '问题反馈专属渠道', link: '/guide/feedback' },
           { text: '服务器法律合规条款', link: '/guide/legal' },
           { text: 'TCraft 论坛系统使用教程', link: '/guide/forum' },
-          { text: '补充重要提醒', link: '/guide/notice' }
+          { text: '补充重要提醒', link: '/guide/notice' },
+          { text: 'RPG 内容更新中', link: '/guide/rpg/' }
         ]
       }
     ],
