@@ -52,6 +52,6 @@ features:
     link: /guide/economy
   - icon: ⚔️
     title: RPG 内容
-    details: 服务器 RPG 系统的完整帮助文档，正在建设中，敬请期待。
+    details: 技能成长、自定义装备与道具、特色怪物与副本挑战，深度 RPG 生存体验。
     link: /guide/rpg/
 ---

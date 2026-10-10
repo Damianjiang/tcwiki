@@ -3,3 +3,5 @@ node_modules/
 Thumbs.db
 docs/.vitepress/dist/
 docs/.vitepress/cache/
+# 服务器插件目录（本地专属，不纳入 wiki 仓库）
+pl/
