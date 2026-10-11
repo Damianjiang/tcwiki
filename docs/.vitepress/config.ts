@@ -148,7 +148,6 @@ export default defineConfig({
           { text: '皮肤设置教程', link: '/guide/skin' },
           { text: '领地系统帮助', link: '/guide/residence' },
           { text: '传送功能指令', link: '/guide/teleport' },
-          { text: '技能奖励与战利品系统', link: '/guide/skills' },
           { text: '经济系统完整教程', link: '/guide/economy' },
           { text: '白名单系统', link: '/guide/whitelist' },
           { text: '服务器重启更新指令', link: '/guide/restart' },
@@ -167,7 +166,12 @@ export default defineConfig({
       {
         text: 'RPG 内容',
         items: [
-          { text: 'RPG 内容总览', link: '/guide/rpg/' }
+          { text: 'RPG 内容总览', link: '/guide/rpg/' },
+          { text: '技能系统', link: '/guide/skills' },
+          { text: '物品与合成', link: '/guide/rpg/items' },
+          { text: '怪物与 Boss', link: '/guide/rpg/mobs' },
+          { text: '副本系统', link: '/guide/rpg/dungeons' },
+          { text: '任务系统', link: '/guide/rpg/quests' }
         ]
       }
     ],
