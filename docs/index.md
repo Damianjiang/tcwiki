@@ -27,9 +27,9 @@ features:
     details: 24 小时在线，累计运行 1500+ 天。
     link: /guide/status
   - icon: 🛡️
-    title: 高防防护
-    details: 全时段 DDoS 防护。
-    link: /guide/about
+    title: 白名单制
+    details: 进服需申请，减少陌生人和小号。
+    link: /guide/whitelist
   - icon: ❤️
     title: 公益运营
     details: 不收费、不卖特权，2021 年开服至今。
