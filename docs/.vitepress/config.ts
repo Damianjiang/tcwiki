@@ -160,6 +160,7 @@ export default defineConfig({
           { text: '休息与互动', link: '/guide/interact' },
           { text: '死亡返回', link: '/guide/death-back' },
           { text: '容器与方块锁', link: '/guide/container-lock' },
+          { text: '连锁挖矿', link: '/guide/chain-mine' },
           { text: '实用小功能', link: '/guide/utility' }
         ]
       },
