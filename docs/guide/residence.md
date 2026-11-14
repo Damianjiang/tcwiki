@@ -71,15 +71,18 @@ A：在 GUI 中把好友设为管理员，或用指令：`/dom setowner 领地�
 
 A：可以，用箭重新选更大范围，输入：`/dom resize 领地名`
 
-## 全部指令速查表
+## 指令速查
 
-- `/dom` - 打开领地GUI
-- `/dom create` - 创建领地
-- `/dom auto` - 自动圆形领地
-- `/dom list` - 查看自己领地
-- `/dom tp` - 传送至领地
-- `/dom remove` - 删除领地
-- `/dom resize` - 扩大/缩小领地
-- `/dom addmember` - 添加成员
-- `/dom removemember` - 移除成员
-- `/dom set` - 设置领地权限
+| 指令 | 作用 |
+|---|---|
+| `/dom` | 打开领地 GUI（推荐用这个） |
+| `/dom create <名字>` | 创建领地 |
+| `/dom auto <名字> <半径>` | 自动圈圆形领地 |
+| `/dom list` | 列出自己的领地 |
+| `/dom tp <名字>` | 传送到领地 |
+| `/dom remove <名字>` | 删除领地 |
+| `/dom resize <名字>` | 扩大/缩小 |
+| `/dom addmember <领地> <玩家>` | 加成员 |
+| `/dom removemember <领地> <玩家>` | 移除成员 |
+| `/dom set <领地> <权限> true/false` | 改权限 |
+| `/dom setowner <领地> <玩家>` | 转让领地 |

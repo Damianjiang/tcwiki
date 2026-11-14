@@ -55,12 +55,6 @@
 
 **示例：** `/skin url "https://example.com/skin.png" slim`
 
-### 自定义皮肤上传步骤
-
-1. 准备 64×64 PNG 皮肤图
-2. 访问 skinsrestorer.net/upload 上传，生成指令
-3. 复制 `/skin url "链接"` 进游戏发送，立即生效
-
 ::: tip 💡 皮肤链接要求
 - 链接必须为**直链**（直接指向 PNG 图片文件）
 - 链接需以 `http://` 或 `https://` 开头

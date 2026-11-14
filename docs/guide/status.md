@@ -1,39 +1,28 @@
-# 服务器状态查询指令
+# 查服务器状态
 
-::: tip 💡 查询方式
-服务器状态可通过游戏内指令或外部监控网站查询。若发现服务器异常，请及时通过 [反馈渠道](/guide/feedback) 联系服主。
+## 游戏内查
+
+| 指令 | 看什么 |
+|---|---|
+| `/tcraft status` | 服务器是否在维护 |
+| `/player`（别名 `/players`、`/online`） | 现在谁在线 |
+
+## 网页查
+
+这些第三方站点能看到实时在线人数、版本、延迟：
+
+- [mclists.cn](https://www.mclists.cn/server-9411.html)
+- [wdsjfwq.com（1）](https://www.wdsjfwq.com/server-2270.html)
+- [wdsjfwq.com（2）](https://www.wdsjfwq.com/server-2269.html)
+
+::: warning 网页人数有延迟
+第三方站点的在线人数不是实时的，**以游戏内 `/player` 为准**。
+
+如果连不上服务器，先看是不是在维护（`/tcraft status`），或者去 [反馈](/guide/feedback) 问一下。
 :::
 
-## 游戏内状态查询
+## 想看详细数据
 
-### 服务器维护状态查询
+`/plan` 会给你一个网页，能看在线时长排名、各世界活动统计、服务器性能曲线。
 
-**指令：** `/tcraft status`
-
-**功能：** 查询服务器当前是否处于维护模式。
-
-### 在线玩家查询
-
-**指令：** `/player`
-
-**别名：** `/players`、`/online`
-
-**功能：** 查看当前服务器所有在线玩家列表。
-
-## 外部状态监控
-
-访问以下网站可查看服务器的实时在线状态、玩家数量、版本等信息：
-
-- [mclists.cn 服务器状态](https://www.mclists.cn/server-9411.html)
-- [wdsjfwq.com 服务器状态 1](https://www.wdsjfwq.com/server-2270.html)
-- [wdsjfwq.com 服务器状态 2](https://www.wdsjfwq.com/server-2269.html)
-
-## 服务器数据统计
-
-**指令：** `/plan`
-
-执行后，聊天框会发送服务器数据统计网页的地址，使用电脑浏览器打开该地址，即可查看详细数据。详见 [服务器数据与统计查询](/guide/data)。
-
-::: warning ⚠️ 注意
-服务器状态查询网站的在线人数可能存在延迟，以游戏内实际在线情况为准。如遇服务器无法连接，请先确认是否为维护期间。
-:::
+详见 [数据统计查询](/guide/data)。
